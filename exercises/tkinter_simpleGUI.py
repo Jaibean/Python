@@ -1,6 +1,6 @@
-from tkinter import *
-import tkinter as tk
 
+import tkinter as tk
+from tkinter import *
 
 
 class ParentWindow(Frame):
@@ -17,14 +17,11 @@ class ParentWindow(Frame):
         self.varLName = StringVar()
        
 
-        print(self.varFName.get())
-        print(self.varLName.get())
-
         self.lblFName = tk.Label(self.master, text='First Name: ', font=("Helvetica",  16), fg='black', bg='lightblue')
-        self.lblFname.grid(row=0, column=0, padx=(30, 0), pady=(30, 0))
+        self.lblFName.grid(row=0, column=0, padx=(30, 0), pady=(30, 0))
 
-        self.lblLName = tk.Label(self.master, text='Lirst Name: ', font=("Helvetica",  16), fg='black', bg='lightblue')
-        self.lblLname.grid(row=1, column=0, padx=(30, 0), pady=(30, 0))
+        self.lblLName = tk.Labe l(self.master, text='Lirst Name: ', font=("Helvetica",  16), fg='black', bg='lightblue')
+        self.lblLName.grid(row=1, column=0, padx=(30, 0), pady=(30, 0))
 
         self.lblDisplay = tk.Label(self.master, text='', font=("Helvetica", 16), fg='black', bg='lightblue')
         self.lblDisplay.grid(row=3, column=1, padx=(30,0), pady=(30,0))
@@ -50,7 +47,7 @@ class ParentWindow(Frame):
     def cancel(self):
         self.master.destroy()
 
-if __name__ == " __main__":
+if __name__ == "__main__":
     root = tk.Tk()
     App = ParentWindow(root)
     root.mainloop()

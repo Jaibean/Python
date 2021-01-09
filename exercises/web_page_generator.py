@@ -29,16 +29,21 @@ class WebPageGUI(Frame):
         self.txt_type = tk.Entry(self.master,text='')
         self.txt_type.grid(row=1,column=0,padx=(30,0),pady=(30,0),sticky=N+E+W)
 
-        self.btn_submit = tk.Button(self.master,width=12,height=2,text='Generate')
+        self.btn_submit = tk.Button(self.master,width=12,height=2,text='Generate', command=self.createNew)
         self.btn_submit.grid(row=2,column=0, padx=(30,0), pady=(30,0),sticky=W)
 
 
+    def createNew(self):
+        newString = self.txt_type.get()
+        htmlFormat = "<html>\n<body>\n<p>" + newString + "</p>\n</body>\n</html>" 
 
+        f = open("web_page_generator.html", "w")
+        f.write(htmlFormat)
+        f.close()
 
-"""f = open("web_page_generator.html, x")
-f.write("Stay tuned for our amazing summer sale!")
-print(f.open())"""
-
+        # couldnt figure out how to use just the file name, only opened with absolute path
+        f = webbrowser.get('chrome')
+        f.open_new('file:///Users/jaimiebertoli/Documents/GitHub/Python/exercises/web_page_generator.html')
 
 
 

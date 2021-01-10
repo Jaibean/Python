@@ -75,9 +75,10 @@ class GUIchallenge(Frame):
         files = os.listdir(source)
         now = dt.datetime.now()
         ago = now-dt.timedelta(hours=24)
-        mtime = os.path.getmtime(source + i)
         for i in files:
-            if mtime > ago:
+            mtime = os.path.getmtime(source + i)
+            modtime = dt.datetime.fromtimestamp(mtime)
+            if modtime > ago:
                 shutil.move(source+i, destination)
 
     

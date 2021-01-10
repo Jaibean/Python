@@ -11,8 +11,8 @@ from tkinter import *
 import tkinter as tk
 from tkinter import filedialog
 import shutil
-import os
-import datetime
+import os, time
+import datetime as dt
 from datetime import timedelta
 
 
@@ -70,11 +70,15 @@ class GUIchallenge(Frame):
 
     #This function will check the selecred directory, look for files, and move them to the second selected directory   
     def check_files(self):
-        source = self.txt_browse1
-        destination = self.txt_browse2
+        source = self.txt_browse1.get() + '/'
+        destination = self.txt_browse2.get() + '/'
         files = os.listdir(source)
+        now = dt.datetime.now()
+        ago = now-dt.timedelta(hours=24)
+        mtime = os.path.getmtime(source + i)
         for i in files:
-            shutil.move(source+i, destination)
+            if mtime > ago:
+                shutil.move(source+i, destination)
 
     
 if __name__ == "__main__":

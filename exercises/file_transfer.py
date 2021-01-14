@@ -12,4 +12,4 @@ files = os.listdir(source)
 
 for i in files:
     #We are saying move the files represented by "i" to their new destination
-    shutil.move(source+i, destination, copy_function=copy2)
+    shutil.move(source+i, destination)

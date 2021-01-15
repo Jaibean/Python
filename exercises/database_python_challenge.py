@@ -1,8 +1,7 @@
 
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Python Ver:   3.6
+# Python Ver:   3.9
 #
 # Author:       Jaimie Bertoli
 #

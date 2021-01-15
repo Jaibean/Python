@@ -12,6 +12,7 @@ from tkinter import *
 import webbrowser
 
 
+# creating the GUI to ask user what they want printed on their web page and to generate it automatically 
 
 class WebPageGUI(Frame):
     def __init__(self, master):
@@ -43,7 +44,9 @@ class WebPageGUI(Frame):
 
         # couldnt figure out how to use just the file name, only opened with absolute path
         f = webbrowser.get('chrome')
-        f.open_new('file:///Users/jaimiebertoli/Documents/GitHub/Python/exercises/web_page_generator.html')
+        f.open_new('file://./web_page_generator.html')
+
+      
 
 
 

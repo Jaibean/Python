@@ -48,7 +48,8 @@ class WebPageGUI(Frame):
         print(fileName)
 
 
-        # couldnt figure out how to use just the file name, only opened with absolute path
+        # couldnt figure out how to use just the file name on macos, only opened with absolute path
+        # imported os to grab absolute path from any users computer and not just mine 
         f = webbrowser.get('chrome')
         f.open_new('file://' + fileName)
 

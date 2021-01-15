@@ -3,9 +3,8 @@
 #
 #Author: Jaimie Bertoli
 #
-# Purpose: The Tech Academy - Python Course, creating our first program together.
-# Demonstrating how to padd variables from function to function while producting
-# a functional game.
+# Purpose: Demonstrating how to pass variables from function to
+# function while producting a functional game.
 #
 # Remember, function_name(variable) _means that we pass in the variable.
 # return variable _means we are returning the variable to back the calling

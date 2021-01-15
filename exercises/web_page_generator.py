@@ -44,7 +44,7 @@ class WebPageGUI(Frame):
 
         # couldnt figure out how to use just the file name, only opened with absolute path
         f = webbrowser.get('chrome')
-        f.open_new('file://./web_page_generator.html')
+        f.open_new('file:///Users/jaimiebertoli/Documents/GitHub/Python/exercises/web_page_generator.html')
 
       
 

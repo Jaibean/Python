@@ -8,7 +8,6 @@ class AccountForm(ModelForm):
         fields = '__all__'
 
 
-
 class TransactionForm(ModelForm):
     class Meta:
         model = Transaction

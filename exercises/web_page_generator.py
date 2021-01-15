@@ -10,6 +10,7 @@
 import tkinter as tk
 from tkinter import *
 import webbrowser
+import os 
 
 
 # creating the GUI to ask user what they want printed on their web page and to generate it automatically 
@@ -42,9 +43,14 @@ class WebPageGUI(Frame):
         f.write(htmlFormat)
         f.close()
 
+        # based on where the previous files was created/saved, we are assigning that file to a variable 
+        fileName = os.path.abspath('web_page_generator.html')
+        print(fileName)
+
+
         # couldnt figure out how to use just the file name, only opened with absolute path
         f = webbrowser.get('chrome')
-        f.open_new('file:///Users/jaimiebertoli/Documents/GitHub/Python/exercises/web_page_generator.html')
+        f.open_new('file://' + fileName)
 
       
 
